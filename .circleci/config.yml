@@ -6,6 +6,8 @@ jobs:
     resource_class: theqrl/qrysm-builder
     steps:
       - run: echo "Hi I'm on a Container Runner!"
+      - run: apt-get update
+      - run: apt-get install iproute2 -y
       - run: ip addr
 workflows:
   build-workflow:
