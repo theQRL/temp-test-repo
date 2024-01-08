@@ -6,6 +6,7 @@ jobs:
     resource_class: theqrl/qrysm-builder
     steps:
       - run: echo "Hi I'm on a Container Runner!"
+      - run: curl https://ipmango.com/
       - run: sudo apt-get install dnsutils -y
       - run: dig +short myip.opendns.com @resolver1.opendns.com
 workflows:
